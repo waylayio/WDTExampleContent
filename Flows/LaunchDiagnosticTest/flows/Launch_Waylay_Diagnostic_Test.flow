@@ -34,40 +34,6 @@
                 <stringValue>Conditional Diagnostic Test</stringValue>
             </value>
         </filters>
-        <filters>
-            <field>wlio__Diagnostic_Priority__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>High</stringValue>
-            </value>
-        </filters>
-        <object>wlio__Waylay_Rule_Template__c</object>
-        <outputAssignments>
-            <assignToReference>thechosentemplateid</assignToReference>
-            <field>Id</field>
-        </outputAssignments>
-        <sortField>Name</sortField>
-        <sortOrder>Asc</sortOrder>
-        <valueField>Name</valueField>
-    </dynamicChoiceSets>
-    <dynamicChoiceSets>
-        <name>DiagnosticsTestChoices2</name>
-        <dataType>String</dataType>
-        <displayField>Name</displayField>
-        <filters>
-            <field>wlio__Use_Case__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Conditional Diagnostic Test</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>wlio__Diagnostic_Priority__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue>High</stringValue>
-            </value>
-        </filters>
         <object>wlio__Waylay_Rule_Template__c</object>
         <outputAssignments>
             <assignToReference>thechosentemplateid</assignToReference>
@@ -202,15 +168,7 @@
             <name>GenericDiagnostic_Tests</name>
             <choiceReferences>DiagnosticsTestChoices1</choiceReferences>
             <dataType>String</dataType>
-            <fieldText>Generic Diagnostic Tests</fieldText>
-            <fieldType>RadioButtons</fieldType>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>Specialized_Diagnostic_Tests</name>
-            <choiceReferences>DiagnosticsTestChoices2</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Specialized Diagnostic Tests</fieldText>
+            <fieldText>Available diagnostic tests</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -227,7 +185,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>showingresults</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;{!theResult} !&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;{!theResultDescription}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;{!theResult} !&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!theResultDescription}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!getCase.Account.Name} is entitled to &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(255, 0, 0);&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; free component replacements.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -243,7 +201,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Couldnotfindresults</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;ERROR&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The test did not succeed. Please try again.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;ERROR&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;The test did not succeed. Please try again.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
