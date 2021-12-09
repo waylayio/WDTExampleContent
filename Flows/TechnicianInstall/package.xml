@@ -8,5 +8,5 @@
         <members>Waylay_Installer_Flow</members>
         <name>FlowDefinition</name>
     </types>
-    <version>47.0</version>
+    <version>53.0</version>
 </Package>
