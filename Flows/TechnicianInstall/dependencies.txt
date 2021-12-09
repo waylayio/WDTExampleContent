@@ -1,0 +1,5 @@
+Before you deploy this flow to your Salesforce Org, beware that the flow has the following pre-requisites:
+
+- Apex helper class to parse multiselect picklist values into a collection variable: https://www.accidentalcodersf.com/2021/01/parse-multi-select-picklist-values-flow.html
+- Bar code scanner app: https://github.com/SFDC-Assets/Lightning-Barcode-Scanner
+
